@@ -5,27 +5,27 @@ import cv2
 import os
 
 transform  = A.Compose([
-    # A.RandomCrop(height=240, width=240, always_apply=True),
+    A.RandomCrop(height=240, width=240, always_apply=True),
     # A.Resize(height=256, width=256, always_apply=True),
     # A.Blur(blur_limit=(3, 5), p=1.0),
     # A.Sharpen(p=1.0),
     # A.RandomBrightnessContrast(always_apply=True),
     # A.VerticalFlip(p=1.0),
     # A.HorizontalFlip(p=1.0),
-    A.RandomRotate90(p=1.0),
+    # A.RandomRotate90(p=1.0),
 ])
 
-dataset_path = "/home/snaak/Documents/datasets/cheese/training_sets/"
+dataset_path = "/home/snaak/Documents/datasets/cheese/multiingredient_cheese_pickup/"
 
-images_dir_name = "imgs/"
-masks_dir_name = "masks/"
+images_dir_name = "augmented_color_imgs_new/"
+masks_dir_name = "augmented_color_masks_new/"
 
-transformed_images_dir_name = "imgs/" 
-transformed_masks_dir_name = "masks/"
+transformed_images_dir_name = "augmented_color_imgs_new/"
+transformed_masks_dir_name = "augmented_class_masks_new/"
 
 apply_transform_to_mask = True
 
-filename_prefix_for_transformed_images_and_masks = "img_rand_rotate_00"
+filename_prefix_for_transformed_images_and_masks = "randcrop240_00"
 filetype_for_transformed_images =".jpg"
 filetype_for_transformed_masks = ".png"
 
