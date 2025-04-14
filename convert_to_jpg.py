@@ -3,8 +3,8 @@
 import cv2
 import os
 
-dirname = "/home/snaak/Documents/Abhi/Lunar/dataset/train_val/og_png_imgs/"
-save_dirname = "/home/snaak/Documents/Abhi/Lunar/dataset/train_val/imgs/" #needs to exist
+dirname = "/home/snaak/Documents/datasets/cheese/cheese_check/og_png_imgs/"
+save_dirname = "/home/snaak/Documents/datasets/cheese/cheese_check/og_jpg_imgs/"
 # save_file_prefix = "img_000"
 
 print("Loading images...")
@@ -16,6 +16,9 @@ print("Images loaded: ")
 print("__________________________________________")
 
 print("saving images in .jpg format...")
+
+# Ensure output directory exists
+os.makedirs(save_dirname, exist_ok=True)
 
 counter = 0
 
