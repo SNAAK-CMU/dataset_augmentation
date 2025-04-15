@@ -5,22 +5,22 @@ from pathlib import Path
 
 # Define source directories for images and masks
 image_dirs = [
-    "/home/snaak/Documents/datasets/cheese/cheese_check/augmented_jpg_imgs/",
-    "/home/snaak/Documents/datasets/cheese/cheese_check/og_jpg_imgs/",
-    "/home/snaak/Documents/datasets/cheese/multiingredient_mozarella_kiosk/imgs/",
-    "/home/snaak/Documents/datasets/cheese/multiingredient_mozarella_kiosk/og_jpg_imgs/",
+    "/home/snaak/Documents/datasets/bologna/bologna_check/augmented_jpg_imgs/",
+    "/home/snaak/Documents/datasets/bologna/bologna_check/og_jpg_imgs/",
+    "/home/snaak/Documents/datasets/bologna/multiingredient_bologna_kiosk/imgs/",
+    "/home/snaak/Documents/datasets/bologna/multiingredient_bologna_kiosk/og_jpg_imgs/",
 ]
 
 mask_dirs = [
-    "/home/snaak/Documents/datasets/cheese/cheese_check/augmented_png_class_masks/",
-    "/home/snaak/Documents/datasets/cheese/cheese_check/og_png_class_masks/",
-    "/home/snaak/Documents/datasets/cheese/multiingredient_mozarella_kiosk/masks/",
-    "/home/snaak/Documents/datasets/cheese/multiingredient_mozarella_kiosk/og_class_masks/",
+    "/home/snaak/Documents/datasets/bologna/bologna_check/augmented_png_class_masks/",
+    "/home/snaak/Documents/datasets/bologna/bologna_check/og_png_class_masks/",
+    "/home/snaak/Documents/datasets/bologna/multiingredient_bologna_kiosk/masks/",
+    "/home/snaak/Documents/datasets/bologna/multiingredient_bologna_kiosk/og_png_class_masks/",
 ]
 
 # Define destination directories for the new dataset
-output_image_dir = "/home/snaak/Documents/datasets/cheese/cheese_check/imgs"
-output_mask_dir = "/home/snaak/Documents/datasets/cheese/cheese_check/masks"
+output_image_dir = "/home/snaak/Documents/datasets/bologna/bologna_check/imgs"
+output_mask_dir = "/home/snaak/Documents/datasets/bologna/bologna_check/masks"
 
 # Create output directories if they don't exist
 os.makedirs(output_image_dir, exist_ok=True)
@@ -30,7 +30,7 @@ os.makedirs(output_mask_dir, exist_ok=True)
 ratios = [
     1.0,  # 100% of dataset1
     1.0,  # 100% of dataset2
-    0.203,  # 20.3% of dataset3
+    0.059,  # 5.9% of dataset3
     1.0,  # 100% of dataset4
 ]
 
