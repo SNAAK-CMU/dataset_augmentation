@@ -3,8 +3,8 @@
 import cv2
 import os
 
-dirname = "/home/snaak/Documents/datasets/cheese/cheese_check/og_png_imgs/"
-save_dirname = "/home/snaak/Documents/datasets/cheese/cheese_check/og_jpg_imgs/"
+dirname = "/home/snaak/Documents/datasets/bologna/bologna_check/og_png_imgs/"
+save_dirname = "/home/snaak/Documents/datasets/bologna/bologna_check/og_jpg_imgs/"
 # save_file_prefix = "img_000"
 
 print("Loading images...")

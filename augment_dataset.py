@@ -7,40 +7,43 @@ from concurrent.futures import ThreadPoolExecutor
 from tqdm import tqdm
 
 transform = A.Compose([
-    # A.RandomCrop(height=480, width=480, always_apply=True),
+    # A.RandomCrop(height=240, width=240, always_apply=True),
     # A.Resize(height=256, width=256, always_apply=True),
     # A.Blur(blur_limit=(3, 5), p=1.0),
     # A.Sharpen(p=1.0),
-    A.RandomBrightnessContrast(always_apply=True),
+    # A.RandomBrightnessContrast(always_apply=True),
     # A.VerticalFlip(p=1.0),
     # A.HorizontalFlip(p=1.0),
     # A.RandomRotate90(p=1.0),
 ])
 
-dataset_path = "/home/snaak/Documents/datasets/cheese/cheese_check/"
+dataset_path = "/home/snaak/Documents/datasets/bologna/bologna_pickup_and_check/"
 
 # to combine augmentations
 # images_dir_name = "augmented_jpg_imgs/"
 # masks_dir_name = "augmented_color_masks/"
 
-# # to apply new augmentations
-# images_dir_name = "og_jpg_imgs/"
-# masks_dir_name = "og_png_color_masks/"
+# to apply new augmentations
+images_dir_name = "og_jpg_imgs/"
+masks_dir_name = "og_png_color_masks/"
 
-images_dir_name = "spatial_augmented_jpg_imgs/"
-masks_dir_name = "spatial_augmented_color_masks/"
+# images_dir_name = "spatial_augmented_jpg_imgs/"
+# masks_dir_name = "spatial_augmented_color_masks/"
 
-# transformed_images_dir_name = "spatial_augmented_jpg_imgs/"
-# transformed_masks_dir_name = "spatial_augmented_color_masks/"
+# transformed_images_dir_name = "intensity_spatial_augmented_jpg_imgs/"
+# transformed_masks_dir_name = "intensity_spatial_augmented_color_masks/"
 
-transformed_images_dir_name = "intensity_augmented_jpg_imgs/"
-transformed_masks_dir_name = "intensity_augmented_color_masks/"
+transformed_images_dir_name = "spatial_augmented_jpg_imgs/"
+transformed_masks_dir_name = "spatial_augmented_color_masks/"
+
+# transformed_images_dir_name = "augmented_jpg_imgs/"
+# transformed_masks_dir_name = "augmented_color_masks/"
 
 
 # Set to True if you want to apply the same transformations to masks, keep false for blur / sharpen / brightness / contrast and set to True only for spatial transformations
 apply_transform_to_mask = True  
 
-filename_prefix_for_transformed_images_and_masks = "randbc_00"
+filename_prefix_for_transformed_images_and_masks = "randbc1_00"
 filetype_for_transformed_images = ".jpg"
 filetype_for_transformed_masks = ".png"
 
